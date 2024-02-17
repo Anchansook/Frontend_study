@@ -117,3 +117,30 @@ console.log(newLength); // 2
 
 // splice
 // : 배열의 기존 요소를 삭제하거나 새로운 요소를 추가하거나의 모든 동작을 수행
+console.log(fruits); // [ 'Strawberry', 'Banana' ]
+
+// - 요소 삭제
+// : splice(삭제할 요소의 시작 인덱스, 삭제할 요소의 수)
+let removedItems = fruits.splice(1, 1);
+console.log(removedItems); // [ 'Banana' ]
+
+// - 요소 추가
+// : splice(추가할 위치의 인덱스, 0(삭제는 안 시키겠단 의미), 아이템나열)
+fruits.splice(1, 0, 'Mango', 'Peach');
+console.log(fruits); // [ 'Strawberry', 'Mango', 'Peach' ]
+
+// - 요소 교체
+// : 기존의 아이템 삭제 + 새로운 요소 추가
+// : splice(시작 인덱스, 제거할 요소의 수, 아이템 나열)
+fruits.splice(1, 2, 'Banana', 'Apple');
+console.log(fruits); // [ 'Strawberry', 'Banana', 'Apple' ]
+
+//! 배열 조작 메서드
+//? 배열 정렬 & 순서 변경
+// sort(): 배열의 요소를 정렬 - 문자열 순서대로 정렬(오름차순)
+let sortArray = fruits.sort();
+console.log(sortArray); // [ 'Apple', 'Banana', 'Strawberry' ]
+
+// reserse(): 배열의 요소의 순서를 반대로 정렬(내림차순)
+let reverseArray = fruits.reverse();
+console.log(reverseArray); // [ 'Strawberry', 'Banana', 'Apple' ]
