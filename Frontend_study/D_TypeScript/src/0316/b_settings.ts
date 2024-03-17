@@ -1,5 +1,4 @@
 /* 
-! 강사님 깃허브 참고***
 
 ! !. Node.js 설치
 : JavaScript의 '런타임(JS의 프로그램들을 실행할 수 있는 환경)' 환경
@@ -16,6 +15,7 @@
     C:\Program Files (x86)\Nodejs    
 
     C:\사용자\User\AppData\Roaming\npm
+    C:\Users\User\AppData\Roaming\npm
 
     : 윈도우 키 + r (실행 창)
       > cmd 입력(명령 프롬프트 실행)
@@ -23,6 +23,16 @@
         npm -v
         ('node'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는 배치 파일이 아닙니다.)
         - 삭제 완료
+
+- 맥(MacOS)
+  : Homebrew를 사용하여 Node 제거하는 방법
+    응용 프로그램 > 유틸리티 폴더 > 터미널 실행
+    brew uninstall --force node
+  
+  : 터미널 실행
+    node -v
+    npm -v
+    (내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는 배치 파일이 아닙니다. - 삭제 완료)
 
 ? Node.js 설치
 : 공식 웹 사이트(구글 > node.js 검색)
@@ -201,9 +211,9 @@ npx tsc --init
 
 - compilerOptions: 컴파일러에 대한 다양한 설정을 포함
   target: 컴파일된 JavaScript의 ECMAScript 버전을 지정(ESS, ES6)
-  module
-  strict
-  outDir
-  esModuleIntrop
+  module: 모듈 시스템을 지정
+  strict: 모든 엄격한 타입 체킹 옵션을 활성화(true/ 비활성화 - false)
+  outDir: 컴파일된 파일이 위치할 디렉토리를 지정
+  esModuleIntrop: CommonJS 모듈을 ES6 모듈처럼 가져오기를 허용
 
 */
